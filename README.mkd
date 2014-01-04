@@ -6,16 +6,31 @@ The code behind (and in front of) Infragram.org -- providing multispectral image
 
 To get started,
 
-    $ git clone --recursive https://github.com/Pioneer-Valley-Open-Science/infragram-js.git
     $ git clone --recursive https://github.com/dwblair/infragram-sandbox/tree/fileupload
     $ git fetch origin
     $ git checkout -b fileupload origin/fileupload
 
 Now we need to get coffeescript, node, and all the rest:
 
-* you'll need nodejs, npm, and mongodb -- ubuntu/debian: `sudo apt-get install nodejs npm mongodb`
+(based on discussion here: https://github.com/joyent/node/issues/3911, I think it's best to install nodejs from chrislea's PPA in Ubuntu, rathan fixing some broken links via a symlink):
+
+* following the instructions here: http://stackoverflow.com/questions/16302436/install-nodejs-on-ubuntu-12-10
+
+    $ sudo apt-get install python-software-properties python g++ make
+    $ sudo add-apt-repository ppa:chris-lea/node.js
+    $ sudo apt-get update
+    $ sudo apt-get install nodejs
+
+* this also installs npm by default
+
+* need to install mongodb:
+    $ sudo apt-get install mongodb
 
 * you'll need coffeescript: 'sudo npm install -g coffee-script'
+
+* install additional required node packages:
+
+    $ sudo npm install mongoose express stylus
 
 * Make the coffescript files:
 
@@ -23,6 +38,8 @@ Now we need to get coffeescript, node, and all the rest:
     $ make
 
 * run 'node app.js' or 'nodejs app.js' from the root directory
+
+    $ node app.js
 
 * start up the server
     $ ./run-linux-mac.sh
