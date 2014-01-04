@@ -4,6 +4,8 @@ The code behind (and in front of) Infragram.org -- providing multispectral image
 
 ###Developers
 
+#### Ubuntu instructions
+
 To get started,
 
     $ git clone --recursive https://github.com/dwblair/infragram-sandbox/tree/fileupload
@@ -17,29 +19,32 @@ Now we need to get coffeescript, node, and all the rest.  Bbased on discussion [
     $ sudo apt-get update
     $ sudo apt-get install nodejs
 
-* this also installs npm by default
+This also installs npm (which we'll need) by default.
 
-* need to install mongodb:
-    $ sudo apt-get install mongodb
+Install coffeescript:
+    
+    $ sudo npm install -g coffee-script
 
-* you'll need coffeescript: 'sudo npm install -g coffee-script'
-
-* install additional required node packages:
+Install additional required node packages:
 
     $ sudo npm install mongoose express stylus
 
-* Make the coffescript files:
+Install mongodb:
+
+    $ sudo apt-get install mongodb
+
+Make the coffeescript files:
 
     $ cd infragram-js/public
     $ make
 
-* run 'node app.js' or 'nodejs app.js' from the root directory
+Run 'node app.js' or 'nodejs app.js' from the root directory
 
     $ node app.js
 
-* start up the server
+Start up the server
     $ ./run-linux-mac.sh
 
-* navigate to the node stuff
+Navigate to the node stuff
 
     $ firefox http://localhost:8001/sandbox
