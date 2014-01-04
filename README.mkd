@@ -10,11 +10,7 @@ To get started,
     $ git fetch origin
     $ git checkout -b fileupload origin/fileupload
 
-Now we need to get coffeescript, node, and all the rest:
-
-(based on discussion here: https://github.com/joyent/node/issues/3911, I think it's best to install nodejs from chrislea's PPA in Ubuntu, rathan fixing some broken links via a symlink):
-
-* following the instructions here: http://stackoverflow.com/questions/16302436/install-nodejs-on-ubuntu-12-10
+Now we need to get coffeescript, node, and all the rest.  Bbased on discussion [here](https://github.com/joyent/node/issues/3911) I think it's best to install nodejs from chrislea's PPA in Ubuntu, rather than fixing some broken links via a symlink).  Accordingly (following the guide [here](http://stackoverflow.com/questions/16302436/install-nodejs-on-ubuntu-12-10)):
 
     $ sudo apt-get install python-software-properties python g++ make
     $ sudo add-apt-repository ppa:chris-lea/node.js
