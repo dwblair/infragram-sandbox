@@ -7,15 +7,26 @@ The code behind (and in front of) Infragram.org -- providing multispectral image
 To get started,
 
     $ git clone --recursive https://github.com/Pioneer-Valley-Open-Science/infragram-js.git
-    $ cd infragram-js/public
-    $ make
-    $ ./run-linux-mac.sh
-    $ firefox http://localhost:8000
+    $ git clone --recursive https://github.com/dwblair/infragram-sandbox/tree/fileupload
+    $ git fetch origin
+    $ git checkout -b fileupload origin/fileupload
 
-To run the whole node server:
+Now we need to get coffeescript, node, and all the rest:
 
 * you'll need nodejs, npm, and mongodb -- ubuntu/debian: `sudo apt-get install nodejs npm mongodb`
-* install node modules with `npm install`
-* run `node app.js` or `nodejs app.js` from the root directory.
-* navigate to http://localhost:8001/sandbox/
 
+* you'll need coffeescript: 'sudo npm install -g coffee-script'
+
+* Make the coffescript files:
+
+    $ cd infragram-js/public
+    $ make
+
+* run 'node app.js' or 'nodejs app.js' from the root directory
+
+* start up the server
+    $ ./run-linux-mac.sh
+
+* navigate to the node stuff
+
+    $ firefox http://localhost:8001/sandbox
